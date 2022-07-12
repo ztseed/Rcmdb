@@ -11,6 +11,7 @@ import urllib3
 
 urllib3.disable_warnings()
 
+# This is Class using to query cmdb from nnitcmdb
 
 class Rcmdb:
 
