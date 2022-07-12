@@ -18,7 +18,7 @@ import pymysql
 import time
 
 from subprocess import Popen, PIPE
-
+# create tgt of kbr5 
 def createKerberostgt(kuser,kpasswd,realm):
     
     password=str.encode(kpasswd+"\n")
@@ -27,7 +27,8 @@ def createKerberostgt(kuser,kpasswd,realm):
     kinit = Popen(kinit_args, stdin=PIPE, stdout=PIPE, stderr=PIPE)
     kinit.stdin.write(password)
     kinit.communicate()
-
+    
+# remove tgt of kbr5
 def destoryKerberostgt():
 
     kdestroy = '/usr/bin/kdestroy'
@@ -35,6 +36,7 @@ def destoryKerberostgt():
     kdes = Popen(kinit_args, stdin=PIPE, stdout=PIPE, stderr=PIPE)
     kdes.communicate()
 
+# inster data to table 
 def insert_data(table,data_n):
 
     for server in data_n:
