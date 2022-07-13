@@ -71,7 +71,7 @@ def insert_data(table,data_n):
                 print("Exit process now...")
                 exit()   
 
-
+# it is main 
 if __name__=='__main__':
 
     fields = []
